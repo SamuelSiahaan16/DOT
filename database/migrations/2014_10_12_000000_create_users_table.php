@@ -22,6 +22,22 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        Schema::create('kategori', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->timestamps();
+        });
+
+        Schema::create('barang', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->text('deskripsi')->nullable();
+            $table->double('harga');
+            $table->unsignedBigInteger('kategori_id');
+            $table->foreign('kategori_id')->references('id')->on('kategori')->onDelete('cascade');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -32,5 +48,7 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('barang');
+        Schema::dropIfExists('kategori');
     }
 }
