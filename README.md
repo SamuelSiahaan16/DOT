@@ -14,17 +14,29 @@ Gambar()
 
 ## Cara Penggunaan
 
-1. Clone The Github repository
+1. Clone The Github repository, ganti file .env.example menjadi .env
+2. Sesuaikan data DB di .env dengan environment di dalam local sendiri
+3. ketik "php artisan migrate:fresh --seed" pada terminal, ketik juga "composer update" pada terminal
+4. setelah itu jalankan menggunakan "php artisan serve"
 
 ## Data
 
 Data Login :
-
-username : admin
+username : admin@dot.co.id
 password : password
 
 ## API
 
 Data Api :
+
+### Untuk Melihat Barang
+http://127.0.0.1:8000/api/barang
+### Untuk Mencari Barang
+http://127.0.0.1:8000/api/barang/{id}
+
+### Untuk Melihat Kategori Barang
+http://127.0.0.1:8000/api/kategori
+### Untuk Mencari Kategori Barang
+http://127.0.0.1:8000/api/kategori/{id}
 
 

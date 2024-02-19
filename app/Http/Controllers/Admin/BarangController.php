@@ -35,8 +35,7 @@ class BarangController extends Controller
 
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'nama' => 'required|unique:barang',
+        $validator = Validator::make($request->all(), [ 
             'deskripsi' => 'nullable',
             'harga' => 'required|numeric',
             'kategori_id' => 'required|exists:kategori,id',
@@ -65,10 +64,13 @@ class BarangController extends Controller
         ]);
     }
 
-    public function edit(KategoriBarang $id)
-    { 
-        return view('page.admin.barang.create',['barang'=>$id]);
+    public function edit($id)
+    {  
+        $barang = Barang::findOrFail($id);
+        $categories = KategoriBarang::get(); 
+        return view('page.admin.barang.create', compact('barang', 'categories'));
     }
+
 
     public function update(Request $request, Barang $barang)
     {
