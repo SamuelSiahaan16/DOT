@@ -6,7 +6,7 @@ Proyek ini bertujuan untuk membuat sebuah aplikasi web sederhana untuk manajemen
 
 ## Design Database
 
-<p align="center">![WhatsApp Image 2024-02-19 at 7 57 44 PM](https://github.com/SamuelSiahaan16/DOT/assets/91043243/70d785e4-de83-4fa9-ac26-5cdc3154ac17)</p>
+![WhatsApp Image 2024-02-19 at 7 57 44 PM](https://github.com/SamuelSiahaan16/DOT/assets/91043243/70d785e4-de83-4fa9-ac26-5cdc3154ac17)
 
 ## Screenshoot
 
